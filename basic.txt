@@ -64,7 +64,13 @@ A와 B가 같은 부모를 가지고 있는형제관계일때
 A바로 오른족에 있는 연속되어있는 B태그만
 
 
+:first-child
+ex) div p:first-child
+div의 자손인 p중에 첫번째 p
 
+:last-child
+ex) div p:last-child
+div의 자손인 p중에 마지막 p
 
 
 color:red 색깔
