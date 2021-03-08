@@ -4,16 +4,24 @@ ex)
 h1{
   color:red;
 }
+ex) 
+h1,h2 
+h1, h2태그 둘 다
+
 2.id 선택자
 ex)
 #select{
   font-size:50px;
 }
+
 3. 클래스 선택자
 ex)
 .active{
   color:blue;
 }
+ex) 
+h1.small
+클래스 이름이 small인 h1 태그
 
 4. 조상 자손 선택자
 ex)
@@ -40,30 +48,6 @@ a:active{
   color:green;
 }
 
------------------------------------
-
-태그.클래스네임
-ex) h1.small
-클래스이름이 small인 h1태그
-
-태그,태그
-ex) h1,h2 
-태그 둘 다
-
-*
-모든 태그를 가리킴.
-ex) h1 *
-h1밑에 있는 모든 태그들
-
-A + B
-A와 B가 같은 부모를 가지고 있는형제관계일때
-A바로 오른족에 있는 1개의 B태그만
-
-A ~ B
-A와 B가 같은 부모를 가지고 있는형제관계일때
-A바로 오른족에 있는 연속되어있는 B태그만
-
-
 :first-child
 ex) div p:first-child
 div의 자손인 p중에 첫번째 p
@@ -72,7 +56,65 @@ div의 자손인 p중에 첫번째 p
 ex) div p:last-child
 div의 자손인 p중에 마지막 p
 
+:nth-child(A)
+A번째 자식.
+ex)div:nth-child(3)
+div 자식중에 3번째 자식.
 
-color:red 색깔
-text-decoration:underline 밑줄
+*
+모든 태그를 가리킴.
+ex) h1 *
+h1밑에 있는 모든 태그들
+
+A + B
+A와 B가 같은 부모를 가지고 있는 형제관계일 때
+A의 바로 오른쪽에 있는 1개의 B 태그만
+
+A ~ B
+A와 B가 같은 부모를 가지고 있는 형제관계일 때 
+A바로 오른쪽에 있는 연속되어 있는 B 태그들만
+
+< font-size >
+1. rem
+html 태그에 적용된 font-size의 영향을 받는다. html 태그의 폰트 크기에 따라서 상대적으로 크기가 결정되기 때문에 이해하기 쉽고 바람직한 단위이다.
+ex) font-size:1rem;
+
+2. px
+모니터 상의 화소 하나의 크기에 대응되는 단위. 고정된 값. 
+ex) font-size:16px;
+
+3. em
+부모 태그의 영향을 받는 상대적인 크기. 부모의 크기에 영향을 받기 때문에 파악하기가 어렵다.
+
+< color >
+ex) color: red;
+ex) color: #ff0011;
+ex) color: rgb(255,255,254);
+
+< text-align >
+정렬
+
+왼쪽 ex) text-align: left;
+가운데 ex) text-align: center;
+오른쪽 ex) text-align: right;
+양쪽 ex) text-align: justify;
+
+< font-weight >
+폰트의 두께 ex) font-weight:bold;
+
+< line-height >
+행 사이의 간격 
+요소 폰트 크기의 배수. 기본값이 1.2
+ex) line-height:1.2;
+
+< 상속 >
+부모 엘리먼트의 속성을 자식 엘리먼트가 물려받는 것.
+ex) color
+
+< 캐스케이딩 >
+하나의 엘리먼트에 대해서 다양한 효과가 영향력을 행사하려고 할 때 우선순위를 어떻게 설정하는가.
+웹브라우저 < 사용자 < 저자
+
+
+
 
