@@ -201,3 +201,25 @@ flex-shrink: 0(화면의 크기를 줄여도 해당 아이템의 너비는 줄�
 
 media quiery는 우선순위가 낮으므로 캐스케이딩 상에서 밀리지 않도록 다른 css 보다 맨 밑에 사용하는게 좋음. 동일한 조건 상에서는 뒤에나오는 것이 우선순위가 높다.
 미디어 쿼리 여러개의 조건을 모두 만족할 때도 맨 아래에 있는 것이 적용되므로, 위의 예처럼 적절히 캐스케이딩 문제가 발생하지 않게 순서를 잘 배치해야 한다.
+
+[ float ]
+1.글의 본문 안에서 이미지를 삽입할 때 이미지를 자연스럽게 삽입하기 위해
+2.레이아웃 잡을 때 사용됨.
+
+float:left , 왼쪽에 떠 있음. 그러면 그 주변에 있는 다른 텍스트들이 자동으로 float된 요소를 피해감. 
+그것을 이제 멈추고자 할 때는 멈추고자 하는 요소에 clear:both 설정. or left right
+
+[ background ]
+background-color:red; 배경색깔.
+background-image:url("asdsad"); 배경사진.
+background-repeat:no-repeat(반복 x),repeat-x(x축으로만반복), repeat-y(y축으로만반복)
+background-size:cover(컨텐트 너비에 꽉 채워서 배경사진을 나타내지만, 크기를 못담는 부분은 잘린다),contain(사진전체를 컨텐트에 채워서 배경을 나타내지만, 비율상 공간이 남는다.
+background-position:left top(좌상), center bottom(중하) => 첫번째는 좌우, 두번째는 상하.
+
+[ transform ]
+변형.
+transform:
+  scaleX(0.5) 
+  scaleY(0.5)    //0.5배 
+  rotate(45deg) // 45도회전 (시계방향으로)
+  translateX(45px) // x축기준 45px이동.
