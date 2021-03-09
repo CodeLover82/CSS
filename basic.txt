@@ -168,10 +168,36 @@ item에 넣을 수 있는 속성 : order, flex-grow, flex-shrink, flex-basis, fl
 [ container ]
 display:flex; 기본적으로 flex를 사용하려면 반드시 container에 설정.
 flex-direction: 정렬방법. row(기본값), row_reverse(반대로), column(세로로), column_reverse(세로로)
+flex-wrap : no-wrap(기본값), wrap(아이템들의 크기가 컨테이너보다 커지면 줄바꿈이 된다.)
+align-items : stretch(꽉 채우게끔 늘어남), flex-start(가로로 배치될 경우 위쪽에 붙음), flex-end(아래쪽에 붙음)
+(생활코딩 강의 참고)
+justify-content : ''
+
 
 [ item ]
 flex-basis: 200px; flex 방향에 해당하는 방향으로 너비 지정.
 flex-grow:0(기본값), 1(컨테이너에 꽉 맞게끔 item들이 공평하게 늘어난다. 특정 아이템만 더 늘이거나 줄이려면, 해당 아이템만 flex-grow값을 늘려주면 된다. flex-basis 값이 존재해야 함.
 비율 설정 기준 : 해당 아이템의 grow값 / 전체 아이템들의 grow값의 합
 flex-shrink: 0(화면의 크기를 줄여도 해당 아이템의 너비는 줄이지 않는다 ), 1(기본값 - 화면의 크기를 줄이면 비율에 맞게 줄어든다). flex-basis 값이 존재해야 함.
-(생활코딩 강의 참고) 
+(생활코딩 강의 참고)
+
+[ media-query ]
+
+@media (max-width:600px){
+  body{
+    background-color:red;
+  } 
+}
+@media (max-width:500px){
+  body{
+    background-color:blue;
+  } 
+}
+@media (min-width:600px){
+  body{
+    background-color:orange;
+  } 
+}
+
+media quiery는 우선순위가 낮으므로 캐스케이딩 상에서 밀리지 않도록 다른 css 보다 맨 밑에 사용하는게 좋음. 동일한 조건 상에서는 뒤에나오는 것이 우선순위가 높다.
+미디어 쿼리 여러개의 조건을 모두 만족할 때도 맨 아래에 있는 것이 적용되므로, 위의 예처럼 적절히 캐스케이딩 문제가 발생하지 않게 순서를 잘 배치해야 한다.
