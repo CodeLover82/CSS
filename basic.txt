@@ -217,9 +217,25 @@ background-size:cover(컨텐트 너비에 꽉 채워서 배경사진을 나타�
 background-position:left top(좌상), center bottom(중하) => 첫번째는 좌우, 두번째는 상하.
 
 [ transform ]
-변형.
+변형. 해당 요소가 블록이나 인라인블록일 때만 작용.
+h1:hover{
 transform:
   scaleX(0.5) 
   scaleY(0.5)    //0.5배 
   rotate(45deg) // 45도회전 (시계방향으로)
-  translateX(45px) // x축기준 45px이동.
+  translateX(45px); // x축기준 45px이동.
+}
+
+[ transition ]
+a{
+  transition-property: transform font-size .. or all; // 변화시킬 속성
+  transition-duration: 2s; // 변화 기간
+  => 축약형 : transition: all 1s;
+             transition: font-size 1s, transform 0.1s;
+}
+a:active{
+  transfrom:translate(20px, 20px);
+  font-size:2rem;
+}
+
+transition-delay:1s // 1초후 변화
